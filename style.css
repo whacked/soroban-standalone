@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f0f0f0;
+    color: #222;
+    font-family: system-ui, -apple-system, sans-serif;
+    padding: 8px;
+}
+
+#app {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#controlPanel {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 4px;
+    opacity: 0.7;
+    border: 1px dotted #ccc;
+    background: #eee;
+    padding: 4px 6px;
+}
+
+#controlPanel input[type="text"],
+#controlPanel select {
+    border: 1px solid #aaa;
+    border-radius: 2px;
+    padding: 2px 6px;
+    font-family: monospace;
+    font-size: 14px;
+    background: white;
+}
+
+#controlPanel input[type="text"]:focus,
+#controlPanel select:focus {
+    outline: none;
+    border-color: #4488cc;
+}
+
+#controlPanel button {
+    border: 1px solid #aaa;
+    border-radius: 2px;
+    padding: 2px 10px;
+    cursor: pointer;
+    font-size: 13px;
+    background: white;
+}
+
+#controlPanel button:hover {
+    background: #ddd;
+}
+
+#sorobanGoal {
+    min-height: 50px;
+    padding: 6px 10px;
+    border: 2px solid #aaa;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+#sorobanGoal h3 {
+    margin: 0;
+}
+
+#mainArea {
+    display: flex;
+    gap: 0;
+    align-items: flex-start;
+    padding-top: 80px;
+}
+
+#sorobanArea {
+    position: relative;
+    flex-shrink: 0;
+}
+
+#sorobanCanvas canvas {
+    display: block;
+}
+
+#problemRoll {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+    pointer-events: none;
+    overflow: visible;
+}
+
+#problemRoll ul {
+    list-style: none;
+    position: relative;
+    font-family: monospace;
+    font-size: large;
+}
+
+#problemRoll li {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+#commandHistory {
+    flex: 1;
+    min-width: 200px;
+    min-height: 400px;
+    background: white;
+    color: #444;
+    border: 1px solid #ccc;
+    font-family: monospace;
+    font-size: 11px;
+    padding: 4px;
+    resize: vertical;
+    opacity: 0.6;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+#exerciseSelect {
+    min-width: 180px;
+}

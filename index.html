@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Soroban Practice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div id="controlPanel">
+            <input id="commandInput" type="text" placeholder="cmd" autocomplete="off" size="3" />
+            <input id="sumInput" type="text" placeholder="total" autocomplete="off" size="5" />
+            <button id="resetBtn" type="button">reset</button>
+            <input id="configurationDisplay" type="text" autocomplete="off" size="15" />
+            <select id="exerciseSelect">
+                <option value="" disabled selected>Select exercises...</option>
+            </select>
+            <button id="startExercise" type="button">Start</button>
+            <button id="exportBtn" type="button">Export</button>
+        </div>
+
+        <div id="sorobanGoal"></div>
+
+        <div id="mainArea">
+            <div id="sorobanArea">
+                <div id="problemRoll"></div>
+                <div id="sorobanCanvas"></div>
+            </div>
+            <textarea id="commandHistory" placeholder="command history"></textarea>
+        </div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

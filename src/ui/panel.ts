@@ -25,6 +25,14 @@ export function createPanel(
     const resetBtn = document.getElementById('resetBtn') as HTMLButtonElement
     const exportBtn = document.getElementById('exportBtn') as HTMLButtonElement
 
+    // Keep the configuration display in sync with whole-board updates
+    // (reset, go-hasan, Start, between-exercise resets, replay)
+    const renderBoard = soroban.onRender
+    soroban.onRender = () => {
+        renderBoard?.()
+        configDisplay.value = soroban.getConfiguration()
+    }
+
     // Wire exercise runner display
     exerciseRunner.onGoalUpdate = (html: string) => {
         goalEl.innerHTML = html
